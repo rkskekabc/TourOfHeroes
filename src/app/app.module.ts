@@ -1,16 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+// src/app/app.module.ts
 
-import { AppComponent } from './app.component';
+import { NgModule }      from '@angular/core'; //1
+import { BrowserModule } from '@angular/platform-browser'; //1
+import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here //1
 
-@NgModule({
+import { AppComponent }  from './app.component'; //2
+
+@NgModule({ //3
+  imports: [
+    BrowserModule,
+    FormsModule // <-- import the FormsModule before binding with [(ngModel)]
+  ],
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule { } //4
