@@ -71,7 +71,7 @@ import { HeroService } from './hero.service';
 })
 export class AppComponent implements OnInit {
   title = 'Tour of Heroes';
-  heroes = Hero[]; //4-1
+  heroes: Hero[]; //4-1
   selectedHero: Hero; //4-2
 
   constructor(private heroService: HeroService){ }
